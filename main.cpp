@@ -1,11 +1,11 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+#include "helper_functions.h"
 #include <iostream>
 
 using namespace cv;
 using namespace std;
-
 
 int main(int argc, const char * argv[]) {
     if (argc !=2) {
@@ -27,9 +27,24 @@ int main(int argc, const char * argv[]) {
     
     waitKey(0);
     
-    //image = cvtCvtColor(image, image, COLOR_RGB2GRAY);
+    Mat image_bw;
+    cvtColor(image, image_bw, COLOR_RGB2GRAY);
     
-    std::cout << "Hello, Worlderrr2!\n";
+    namedWindow( "Display window - b&w", WINDOW_AUTOSIZE );
+    imshow( "Display window - b&w", image_bw);
     
+    waitKey(0);
+    
+    Mat image_bin;
+    threshold(image_bw, image_bin, 125, 255, THRESH_BINARY);
+    
+    namedWindow( "Display window - bin", WINDOW_AUTOSIZE );
+    imshow( "Display window - bin", image_bin);
+    
+    waitKey(0);
+    
+    int aux = rgb2gray(4, 4);
+    
+    std::cout << "Hello, Lena!\n" << aux << endl;
     return 0;
 }
