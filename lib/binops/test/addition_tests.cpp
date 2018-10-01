@@ -41,18 +41,28 @@ TEST(AdditionTests, TestItSetsTheRHS)
 
 TEST(AdditionTests, TestItGivesTheExpectedResultFor3And5)
 {
+	//given
 	Addition a = Addition();
 	a.setLHS(3);
 	a.setRHS(5);
+
+	// when
 	int result = a.perform();
+
+	// then
 	ASSERT_EQ(result, 8);
 }
 
 TEST(AdditionTests, TestItGivesTheExpectedResultFor1And2)
 {
+	// given
 	Addition a = Addition();
 	a.setLHS(1);
 	a.setRHS(2);
+
+	// when
 	int result = a.perform();
+
+	// then
 	ASSERT_EQ(result, 3);
 }
