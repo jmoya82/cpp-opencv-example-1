@@ -1,7 +1,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
-#include "helper_functions.h"
+#include "helper.hpp"
 #include <iostream>
 
 using namespace cv;
@@ -43,7 +43,7 @@ int main(int argc, const char * argv[]) {
     
     waitKey(0);
     
-    int aux = rgb2gray(4, 4);
+    int aux = rgb2gray(6, 6);
     
     std::cout << "Hello, Lena!\n" << aux << endl;
     return 0;
