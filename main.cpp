@@ -27,8 +27,12 @@ int main(int argc, const char * argv[]) {
     
     waitKey(0);
     
+    //Mat image_bw;
+    //cvtColor(image, image_bw, COLOR_RGB2GRAY);
+    
+    //Mat image_bw2;
     Mat image_bw;
-    cvtColor(image, image_bw, COLOR_RGB2GRAY);
+    rgb3gray(image, image_bw);
     
     namedWindow( "Display window - b&w", WINDOW_AUTOSIZE );
     imshow( "Display window - b&w", image_bw);
