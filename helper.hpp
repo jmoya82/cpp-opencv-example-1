@@ -11,6 +11,6 @@
 #include <stdio.h>
 
 int rgb2gray(int a, int b);
-cv::Mat rgb3gray(cv::Mat img_color, cv::Mat img_bw);
+void rgb3gray(cv::InputArray img_color, cv::OutputArray image_bw);
 
 #endif /* helper_hpp */

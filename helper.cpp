@@ -14,7 +14,6 @@ int rgb2gray(int a, int b) {
     return a + b;
 }
 
-cv::Mat rgb3gray(cv::Mat img_color, cv::Mat image_bw) {
+void rgb3gray(cv::InputArray img_color, cv::OutputArray image_bw) {
     cv::cvtColor(img_color, image_bw, cv::COLOR_RGB2GRAY);
-    return image_bw;
 }
