@@ -27,12 +27,8 @@ int main(int argc, const char * argv[]) {
     
     waitKey(0);
     
-    //Mat image_bw;
-    //cvtColor(image, image_bw, COLOR_RGB2GRAY);
-    
-    //Mat image_bw2;
     Mat image_bw;
-    rgb3gray(image, image_bw);
+    rgb2gray(image, image_bw);
     
     namedWindow( "Display window - b&w", WINDOW_AUTOSIZE );
     imshow( "Display window - b&w", image_bw);
@@ -47,8 +43,6 @@ int main(int argc, const char * argv[]) {
     
     waitKey(0);
     
-    int aux = rgb2gray(6, 6);
-    
-    std::cout << "Hello, Lena!\n" << aux << endl;
+    std::cout << "\nHello, Lena!\n" << endl;
     return 0;
 }

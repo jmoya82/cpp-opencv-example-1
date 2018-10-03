@@ -10,7 +10,6 @@
 
 #include <stdio.h>
 
-int rgb2gray(int a, int b);
-void rgb3gray(cv::InputArray img_color, cv::OutputArray image_bw);
+void rgb2gray(cv::InputArray img_color, cv::OutputArray image_bw);
 
 #endif /* helper_hpp */
